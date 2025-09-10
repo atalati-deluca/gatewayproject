@@ -1,28 +1,39 @@
-t
 <!DOCTYPE html>
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Trucking Analysis Report</title>
-  <style>
-    body {{ font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }}
-    h1 {{ color: {nav_color}; }}
-    p {{ font-size: 1.1em; color: #333; }}
-  </style>
+  <link rel="stylesheet" href="mystyle.css">
+  <title>DeLuca Sample Dashboards</title>
 </head>
 <body>
   
-<nav style='background-color:#2B4053;padding:1em;'>
+<nav>
+  <img src="logo.jpg" alt="DeLuca Logo" id="logo"/>
   <a href='index.html' style='color:#E2D781;margin-right:20px;'>Home</a>
-  <a href='compliance.html' style='color:#E2D781;margin-right:20px;'>Compliance Management</a>
+  <a href='overview.html' style='color:#E2D781;margin-right:20px;'>Overview Metrics</a>
+  <a href='dbe.html' style='color:#E2D781;margin-right:20px;'>DBE Metrics</a>
+  <a href='payapps.html' style='color:#E2D781;margin-right:20px;'>Payment Application Metrics</a>
+  <a href='pw.html' style='color:#E2D781;margin-right:20px;'>Prevailing Wage Metrics</a>
   <a href='trucking.html' style='color:#E2D781;'>Trucking Analysis</a>
 </nav>
 
-  <div class='content' align='center'>
+<div class="container">
+  <div class='content'>
+    <h2>Key Points</h2>
+      <ul>
+        <li>Overview of the report</li>
+        <li>Important metrics</li>
+        <li>Summary insights</li>
+      </ul>
+  </div>
+  <div class="dashboard">
     <h1>Trucking Analysis</h1>
     <p>This report analyzes fleet performance, delivery efficiency, and route optimization for logistics operations.</p>
-    <iframe title="Overweight Trucking Analysis" width="80%" height="80%" src="https://app.powerbi.com/view?r=eyJrIjoiMjA0YTNjOGMtNzZkYy00NDc1LTljM2EtZWNlMjQ1MTVhNjhhIiwidCI6ImI2OTc2OTRlLTU3MGQtNDY4NC1iYWU2LWE3YWVmNjhlM2Q1YiIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe title="Overweight Trucking Analysis" width="800" height="486" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiMjA0YTNjOGMtNzZkYy00NDc1LTljM2EtZWNlMjQ1MTVhNjhhIiwidCI6ImI2OTc2OTRlLTU3MGQtNDY4NC1iYWU2LWE3YWVmNjhlM2Q1YiIsImMiOjN9&pageName=ac357c89a6641b2129c6" 
+    frameborder="0" allowFullScreen="true"></iframe>
   </div>
+</div>
 </body>
 </html>
