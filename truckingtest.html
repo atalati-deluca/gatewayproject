@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="stylesheet" href="mystyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/powerbi-client/2.23.7/powerbi.min.js"></script>
+
+  <title>DeLuca Sample Dashboards</title>
+</head>
+<body>
+  
+<nav>
+  <img src="logo.jpg" alt="DeLuca Logo" id="logo"/>
+  <a href='index.html' style='color:#E2D781;margin-right:20px;'>Home</a>
+  <a href='overview.html' style='color:#E2D781;margin-right:20px;'>Overview</a>
+  <a href='dbe.html' style='color:#E2D781;margin-right:20px;'>DBE</a>
+  <a href='payapps.html' style='color:#E2D781;margin-right:20px;'>Payment Application</a>
+  <a href='pw.html' style='color:#E2D781;margin-right:20px;'>Prevailing Wage</a>
+  <a href='trucking.html' style='color:#E2D781;'>Trucking Analysis</a>
+</nav>
+
+
+<div class="container">
+    <div class='content'>
+      <h2>Key Points</h2>
+      <ul>
+        <li>Overview of the report</li>
+        <li>Important metrics</li>
+        <li>Summary insights</li>
+      </ul>
+    </div>
+
+    <div class="dashboard">
+      <h1>Trucking Analysis</h1>
+      <p>This report analyzes fleet performance, delivery efficiency, and route optimization for logistics operations.</p>
+      <div id="reportContainer" style="height:486px; width:800px;"></div>
+    </div>
+  </div>
+  <script>
+      if (window.powerbi) {
+      document.body.innerHTML += "<p>✅ Power BI SDK loaded successfully!</p>";
+    } else {
+      document.body.innerHTML += "<p>❌ Power BI SDK failed to load.</p>";
+    }
+    const embedConfig = {
+      type: 'report',
+      embedUrl: 'https://app.powerbi.com/view?r=eyJrIjoiNWFiYzVjMzgtY2NhYy00YjE5LWFkY2ItYjBmNmRkNDQ1ZDc0IiwidCI6ImI2OTc2OTRlLTU3MGQtNDY4NC1iYWU2LWE3YWVmNjhlM2Q1YiIsImMiOjN9&pageName=a5b302d9338fe7a728ac',
+      settings: {
+        navContentPaneEnabled: false,
+        filterPaneEnabled: false,
+        pageNavigationEnabled: false
+      }
+    };
+
+    const reportContainer = document.getElementById('reportContainer');
+    powerbi.embed(reportContainer, embedConfig);
+
+  </script>
+</body>
+</html>

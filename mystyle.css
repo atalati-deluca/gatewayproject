@@ -6,7 +6,8 @@ body {
   height:100%;
 }
 nav {
-  background-color:#2B4053;
+  position: relative;
+  background-color:#333e50;
   padding:5px;
   height:10%;
   display: flex;
@@ -17,8 +18,16 @@ nav a{
   text-decoration: none;
   padding:10px;
 }
-#logo {height: 60px;}
-h1 { color: nav_color; }
+nav a:hover{
+  text-decoration: underline;
+  font-size: large;
+}
+#logo {
+  height: 45px;
+  position: absolute;
+  left:0;
+}
+h1,h2 { color: #333e50; }
 p {font-size: 1.1em; color: #333; }
 .container {
   display: flex;
