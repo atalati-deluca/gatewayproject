@@ -1,5 +1,17 @@
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-    nav {background-color:#2B4053;padding:3px; align-items: center;}
+    nav {
+      background-color:#2B4053;
+      padding:5px;
+      height:60px;
+      display: flex;
+      align-items: center;   /* Vertical centering */
+      justify-content: center; /* Optional: Horizontal centering */
+
+    }
+    nav a{
+      text-decoration: none;
+      padding:10px;
+    }
     #logo {height: 60px;}
     h1 { color: nav_color; }
     p {font-size: 1.1em; color: #333; }
