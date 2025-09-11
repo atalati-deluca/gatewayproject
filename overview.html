@@ -5,6 +5,27 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel="stylesheet" href="mystyle.css">
   <title>DeLuca Sample Dashboards</title>
+  <style>
+      #hiddenDiv {
+        display: none;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+
+      #toggleButton {
+        width:100%;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #2B4053;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+      }
+  </style>
+
 </head>
 <body>
   
@@ -30,19 +51,37 @@
       </ul>
       <p><p class="header2">PW Compliance %: </p>How many CPR entries had underpayments vs the total number of CPR entries (1 CPR entry = Employee, day worked, ST/OT)  </p>
       <p><p class="header2">Payment Application %: </p>Percentage of Payment Application rows that had no variances with recalculated amounts  </p>
-      <p class="header2">Contractor Compliance Analysis and Metrics Table:  </p>
-      <p class="header2">   For each contractor, lists the following factors: </p> 
+      
+     <p class="header2">Contractor Compliance Analysis & Metrics Table  <button id="toggleButton">▼ Show More</button></p> 
+
+  <div id="hiddenDiv">
+      <p class="header2">   For each contractor, lists the following factors:
       <ul><li>DBE Plan: a percentage of their planned DBE spend submitted for the job compared to their total contract value. 10% is compliant for this dashboard. A green check mark is visible if the plan => 10%, while a red X appears if the plan is < 10%  </li>
-        <li>DBE – CUF Inspection: Lists if the DBE has gone through a CUF Inspection, and if it had any flags or not. At least one flag during the inspection will trigger the red x showing “non-compliant”. A green check appears if the inspection was performed and had no issues, while a yellow icon will appear if an inspection has yet to be provided.  </li>
+        <li>DBE - CUF Inspection: Lists if the DBE has gone through a CUF Inspection, and if it had any flags or not. At least one flag during the inspection will trigger the red x showing “non-compliant”. A green check appears if the inspection was performed and had no issues, while a yellow icon will appear if an inspection has yet to be provided.  </li>
         <li>DBE % of Contract Spent: Shows how much of each contractors planned DBE Spend they have paid the DBE to date.  </li>
         <li>PW Underpayments: $ value of Prevailing Wage underpayments have been derived from the Certified Payrolls (Uses Certified Payrolls and Applicable Prevailing Wage Rates)  </li>
         <li>Sum of Variance: Miscalculations identified when reviewing payment applications  </li>
-        <li>PA Billed to Date: Payment Applications submitted to date by each contractor. </li></ul>
+        <li>PA Billed to Date: Payment Applications submitted to date by each contractor. </li></ul></p>
+  </div>
+          <script>
+            const toggleButton = document.getElementById("toggleButton");
+            const hiddenDiv = document.getElementById("hiddenDiv");
+
+            toggleButton.addEventListener("click", () => {
+              if (hiddenDiv.style.display === "none") {
+                hiddenDiv.style.display = "block";
+                toggleButton.textContent = "▲ Hide";
+              } else {
+                hiddenDiv.style.display = "none";
+                toggleButton.textContent = "▼ Show More";
+              }
+            });
+          </script>
 </div>
   <div class="dashboard">
-    <h1>Overview of Compliance</h1>
+    <h1>Overview of Compliance Dashboard</h1>
     <p class="header1">All items on page are able to be filtered for individual contractors by selecting a contractor on the left panel.  </p>
-    <iframe title="" width="800" height="486" 
+    <iframe title="" width="900" height="546.75" 
     src="https://app.powerbi.com/view?r=eyJrIjoiNWFiYzVjMzgtY2NhYy00YjE5LWFkY2ItYjBmNmRkNDQ1ZDc0IiwidCI6ImI2OTc2OTRlLTU3MGQtNDY4NC1iYWU2LWE3YWVmNjhlM2Q1YiIsImMiOjN9&pageName=d909ea928561e2fe331f" 
     frameborder="0" allowFullScreen="true"></iframe>
     <p class="header1">Click on each button for PW, PA, or DBE to view more details for that metric  </p>

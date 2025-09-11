@@ -5,9 +5,42 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel="stylesheet" href="mystyle.css">
   <title>DeLuca Sample Dashboards</title>
+  <style>
+    body{
+      display:none;
+    }
+  </style>
 </head>
 <body>
   
+<script>
+
+    const correctPassword = "delucaGCD2025"; // Change this to your desired password
+
+    // Check if password was already verified
+    if (localStorage.getItem("authenticated") === "true") {
+      document.body.style.display = "block";
+    } else {
+      let userPassword = "";
+      while (userPassword !== correctPassword) {
+        userPassword = prompt("Enter the password:");
+        if (userPassword === null) {
+          alert("Password entry cancelled. Reload the page to try again.");
+          break;
+        }
+        if (userPassword !== correctPassword) {
+          alert("Incorrect password. Please try again.");
+        }
+      }
+
+      if (userPassword === correctPassword) {
+        localStorage.setItem("authenticated", "true");
+        document.body.style.display = "block";
+      }
+    }
+
+  </script>
+
 <nav>
   <img src="logo.jpg" alt="DeLuca Logo" id="logo"/>
   <a href='index.html' style='color:#E2D781;margin-right:20px;'>Home</a>
@@ -18,10 +51,10 @@
   <a href='trucking.html' style='color:#E2D781;'>Trucking Analysis</a>
 </nav>
 
-  <div>
-    <h1>Welcome to the Power BI Dashboard</h1>
-    <p>Explore interactive reports on compliance management and trucking analysis using the navigation bar above.</p>
-    
+  <div style="text-align: center;">
+    <h1>DeLuca Advisory and Services: Sample Dashboards</h1>
+    <p>Add Introductory content</p>
+    <p class="header2" id="disclaimer">Disclaimer: This tool uses fake/dummy datasets.Thus it has been published publicly on a website for viewing purposes only.</p>
   </div>
 </body>
 </html>

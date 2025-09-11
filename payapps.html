@@ -20,19 +20,34 @@
 
 <div class="container">
   <div class='content'>
-    <h2>Key Points</h2>
+    <h2>Payment Application Metrics</h2>
+    <p class="header2">The table contains each Payment Application as submitted by the Contractor.</p>
+    <p>If any value in the payment application is in <span style="color:red;">red text</span>, it indicates the recalculated figure differs from what is listed in the PA.  </p>
+    <p>Can filter by “Payment Type” to drill in to Original SOV or Change Order billings.  </p>
+    
+    <p class="header2">How recalculations are made:  </p>
+    
       <ul>
-        <li>Overview of the report</li>
-        <li>Important metrics</li>
-        <li>Summary insights</li>
+        <li>Contract Value: SOV for each contractor, lists if Change Order or Original Contract Item </li>
+        <li>Total Billed from Previous Payment Application: Take the “Total Billed to Date” from the most recent Payment Application  </li>
+        <li>Work Completed this period: Recalculation of any labor and material line items within the Payment Application </li>
+        <li>Total Billed to Date: Sums the recalculated “Total Billed from Previous Payment Application” and recalculated “Work Completed this Period”  </li>
+        <li>Contract Amount Remaining: Subtracts the recalculated Total Billed to Date from the SOV.  </li>
+        <li>Retainage Withheld: Recalculation of 10% (Example Retainage Rate) of Work Completed this Period (Retainage not applicable to materials)  </li>
+        <li>Current Payment Due: Recalculated Work Completed this period – Recalculated Retainage  </li>
       </ul>
+
+    <h2>PA Details</h2>
+    <p><bold>Recalculated Variances:</bold> For items in the summary tab that are listed red, shows the original PA amount, the recalculated amount, and the difference between the two.  </p>
+    <p><bold>Billed to Date:</bold> For each contractor, shows the most recent payapp submitted, and the to date billing information.  </p>
   </div>
   <div class="dashboard">
-    <h1>Payment Application Metrics</h1>
-    <p>This report analyzes fleet performance, delivery efficiency, and route optimization for logistics operations.</p>
-    <iframe title="" width="800" height="486" 
+    <h1>Payment Application Dashboard</h1>
+    <p class="header1">Must select a contractor and PA # </p>
+    <iframe title="" width="900" height="546.75" 
     src="https://app.powerbi.com/view?r=eyJrIjoiNWFiYzVjMzgtY2NhYy00YjE5LWFkY2ItYjBmNmRkNDQ1ZDc0IiwidCI6ImI2OTc2OTRlLTU3MGQtNDY4NC1iYWU2LWE3YWVmNjhlM2Q1YiIsImMiOjN9&pageName=c97a77c4e5f112123899"
     frameborder="0" allowFullScreen="true"></iframe>
+    <p class="header1">Click to view PA Variances: Click to navigate to view PA Variances and total billings to date</p>
   </div>
 </div>
 </body>
