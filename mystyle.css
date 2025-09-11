@@ -8,8 +8,8 @@ body {
 nav {
   position: relative;
   background-color:#333e50;
-  padding:5px;
-  height:10%;
+  padding: 5px 20px 5px 80px; /* Add left padding to make space for logo */
+  height: 10vh;               /* Use viewport height for consistency */
   display: flex;
   align-items: center;   /* Vertical centering */
   justify-content: center; /* Optional: Horizontal centering */
@@ -23,15 +23,18 @@ nav a:hover{
   font-size: large;
 }
 #logo {
-  height: 45px;
+  height: 100%;           /* Fill the full height of the nav */
   position: absolute;
-  left:0;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+
 }
 h1,h2 { color: #333e50; }
 p {font-size: 1.1em; color: #333; }
 .container {
   display: flex;
-  height: 90%;
+  height: 90vh;
 }
 
 .content {
@@ -64,4 +67,5 @@ font-weight: bold;
   width:100%;
   font-size: small;
   background-color: rgb(214, 147, 147);
+
 }
